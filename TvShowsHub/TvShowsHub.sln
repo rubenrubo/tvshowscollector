@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.API", "TvShowsHub.API\TvShowsHub.API.csproj", "{E59512A6-59B2-41A6-9AF7-9DF94C21361C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.Domain", "TvShowsHub.Domain\TvShowsHub.Domain.csproj", "{6FC06F7B-C977-417A-B8DF-A54C7430FE92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.Tests", "TvShowsHub.Tests\TvShowsHub.Tests.csproj", "{4A2264D6-DD6D-4D1C-9611-1588CB45E79D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.TvMazeClient", "TvShowsHub.TvMazeClient\TvShowsHub.TvMazeClient.csproj", "{92CBBA84-D5E1-4A1A-A4A9-C80C240AC462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.Repository", "TvShowsHub.Repository\TvShowsHub.Repository.csproj", "{1C8B3F03-C197-4754-A873-A9DEBD4875F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E59512A6-59B2-41A6-9AF7-9DF94C21361C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E59512A6-59B2-41A6-9AF7-9DF94C21361C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E59512A6-59B2-41A6-9AF7-9DF94C21361C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E59512A6-59B2-41A6-9AF7-9DF94C21361C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC06F7B-C977-417A-B8DF-A54C7430FE92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC06F7B-C977-417A-B8DF-A54C7430FE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC06F7B-C977-417A-B8DF-A54C7430FE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC06F7B-C977-417A-B8DF-A54C7430FE92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2264D6-DD6D-4D1C-9611-1588CB45E79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2264D6-DD6D-4D1C-9611-1588CB45E79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2264D6-DD6D-4D1C-9611-1588CB45E79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2264D6-DD6D-4D1C-9611-1588CB45E79D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92CBBA84-D5E1-4A1A-A4A9-C80C240AC462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92CBBA84-D5E1-4A1A-A4A9-C80C240AC462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92CBBA84-D5E1-4A1A-A4A9-C80C240AC462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92CBBA84-D5E1-4A1A-A4A9-C80C240AC462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C8B3F03-C197-4754-A873-A9DEBD4875F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8B3F03-C197-4754-A873-A9DEBD4875F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8B3F03-C197-4754-A873-A9DEBD4875F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8B3F03-C197-4754-A873-A9DEBD4875F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
