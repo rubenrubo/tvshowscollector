@@ -5,6 +5,14 @@ namespace TvShowsHub.Repository.Repositories;
 
 public class TvShowRepository(TvShowsHubDbContext dbContext) : ITvShowRepository
 {
+    public async Task<IEnumerable<TvShow>> GetTvShowsAsync(int page = 0, int pageSize = 500)
+    {
+        return await dbContext.TvShows
+            .Skip(page * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+    }
+
     public async Task<TvShow?> GetTvShowsByIdAsync(int id)
     {
         return await dbContext.TvShows.FirstOrDefaultAsync(x => x.Id == id);

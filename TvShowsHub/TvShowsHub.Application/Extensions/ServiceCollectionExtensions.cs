@@ -11,6 +11,7 @@ public static class ServiceCollectionExtensions
     public static void AddApplicationServices(this IServiceCollection services)
     {
         services.AddScoped<IManageTvShowsService, ManageTvShowsService>();
+        services.AddScoped<ISyncExternalTvShowsService, SyncTvMazeShowsService>();
         services.AddSingleton<IRateLimiter>(new RateLimiter(maxCalls: 20, timeWindow: TimeSpan.FromSeconds(10)));
     }
 }
