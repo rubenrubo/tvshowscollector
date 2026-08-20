@@ -16,6 +16,7 @@ public class TvShowRepository(TvShowsHubDbContext dbContext) : ITvShowRepository
         }
 
         return await query
+            .OrderByDescending(x => x.Premiered)
             .Skip(page * pageSize)
             .Take(pageSize)
             .ToListAsync();
