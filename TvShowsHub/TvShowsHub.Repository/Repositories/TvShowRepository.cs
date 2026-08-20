@@ -5,9 +5,17 @@ namespace TvShowsHub.Repository.Repositories;
 
 public class TvShowRepository(TvShowsHubDbContext dbContext) : ITvShowRepository
 {
-    public async Task<IEnumerable<TvShow>> GetTvShowsAsync(int page = 0, int pageSize = 500)
+    public async Task<IEnumerable<TvShow>> GetTvShowsAsync(int page = 0, int pageSize = 500, string? name = null)
     {
-        return await dbContext.TvShows
+        var query = dbContext.TvShows.AsQueryable();
+
+        if (!string.IsNullOrEmpty(name))
+        {
+            query = query.Where(x => x.Name != null && x.Name.Contains(name));
+            page = 0; // Reset to first page when filtering
+        }
+
+        return await query
             .Skip(page * pageSize)
             .Take(pageSize)
             .ToListAsync();

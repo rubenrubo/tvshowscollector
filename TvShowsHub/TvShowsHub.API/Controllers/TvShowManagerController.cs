@@ -6,9 +6,9 @@ namespace TvShowsHub.API.Controllers;
 public class TvShowManagerController(IManageTvShowsService service) : BaseController
 {
     [HttpGet]
-    public async Task<ActionResult> Get(int page = 0, int pageSize = 500)
+    public async Task<ActionResult> Get(int page = 0, int pageSize = 500, string? name = null)
     {
-        var result = await service.GetTvShowsAsync(page, pageSize);
+        var result = await service.GetTvShowsAsync(page, pageSize, name);
         return Ok(result);
     }
 

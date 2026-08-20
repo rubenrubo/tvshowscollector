@@ -5,9 +5,9 @@ namespace TvShowsHub.Application.TvShows;
 public class ManageTvShowsService(
     ITvShowRepository repository) : IManageTvShowsService
 {
-    public async Task<IEnumerable<TvShow>> GetTvShowsAsync(int page = 0, int pageSize = 500)
+    public async Task<IEnumerable<TvShow>> GetTvShowsAsync(int page = 0, int pageSize = 500, string? name = null)
     {
-        return await repository.GetTvShowsAsync(page, pageSize);
+        return await repository.GetTvShowsAsync(page, pageSize, name);
     }
 
     public async Task<TvShow> AddTvShowAsync(AddTvShowSpec spec)
