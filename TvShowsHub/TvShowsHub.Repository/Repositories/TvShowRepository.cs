@@ -5,9 +5,9 @@ namespace TvShowsHub.Repository.Repositories;
 
 public class TvShowRepository(TvShowsHubDbContext dbContext) : ITvShowRepository
 {
-    public Task<TvShow[]> GetTvShowsAsync()
+    public async Task<TvShow?> GetTvShowsByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await dbContext.TvShows.FirstOrDefaultAsync(x => x.Id == id);
     }
 
     public async Task<TvShow> AddTvShowAsync(TvShow tvShow)
@@ -15,6 +15,12 @@ public class TvShowRepository(TvShowsHubDbContext dbContext) : ITvShowRepository
         await dbContext.AddAsync(tvShow);
         await dbContext.SaveChangesAsync();
         return tvShow;
+    }
+
+    public async Task UpdateTvShowAsync(TvShow tvShow)
+    {
+        dbContext.Update(tvShow);
+        await dbContext.SaveChangesAsync();
     }
 
     public async Task DeleteTvShowAsync(int id)

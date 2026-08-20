@@ -2,10 +2,29 @@ namespace TvShowsHub.Domain.TvShows;
 
 public class TvShow
 {
+    public TvShow() {}
+    
+    public TvShow(AddTvShowSpec spec)
+    {
+        Name = spec.Name;
+        Language = spec.Language;
+        Premiered = spec.Premiered;
+        Genres = spec.Genres;
+        Summary = spec.Summary;
+    }
+    
+    public void Update(UpdateTvShowSpec spec)
+    {
+        Name = spec.Name;
+        Language = spec.Language;
+        Premiered = spec.Premiered;
+        Genres = spec.Genres;
+        Summary = spec.Summary;
+    }
     public int? Id { get; init; }
-    public string? Name { get; init; }
-    public string? Language { get; init; }
-    public DateOnly? Premiered { get; init; }
-    public string[]? Genres { get; init; }
-    public string? Summary { get; init; }
+    public string? Name { get; set; }
+    public string? Language { get; set; }
+    public DateOnly? Premiered { get; set; }
+    public string[]? Genres { get; set; }
+    public string? Summary { get; set; }
 }
