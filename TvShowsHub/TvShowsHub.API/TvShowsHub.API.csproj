@@ -10,4 +10,10 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TvShowsHub.Application\TvShowsHub.Application.csproj" />
+      <ProjectReference Include="..\TvShowsHub.Repository\TvShowsHub.Repository.csproj" />
+      <ProjectReference Include="..\TvShowsHub.TvMazeClients\TvShowsHub.TvMazeClients.csproj" />
+    </ItemGroup>
+
 </Project>

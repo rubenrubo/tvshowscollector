@@ -6,9 +6,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.Domain", "TvShow
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.Tests", "TvShowsHub.Tests\TvShowsHub.Tests.csproj", "{4A2264D6-DD6D-4D1C-9611-1588CB45E79D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.TvMazeClient", "TvShowsHub.TvMazeClient\TvShowsHub.TvMazeClient.csproj", "{92CBBA84-D5E1-4A1A-A4A9-C80C240AC462}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.TvMazeClients", "TvShowsHub.TvMazeClients\TvShowsHub.TvMazeClients.csproj", "{92CBBA84-D5E1-4A1A-A4A9-C80C240AC462}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.Repository", "TvShowsHub.Repository\TvShowsHub.Repository.csproj", "{1C8B3F03-C197-4754-A873-A9DEBD4875F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvShowsHub.Application", "TvShowsHub.Application\TvShowsHub.Application.csproj", "{53B70E59-5831-45CD-B289-BED0E912F731}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +38,9 @@ Global
 		{1C8B3F03-C197-4754-A873-A9DEBD4875F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C8B3F03-C197-4754-A873-A9DEBD4875F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C8B3F03-C197-4754-A873-A9DEBD4875F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B70E59-5831-45CD-B289-BED0E912F731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B70E59-5831-45CD-B289-BED0E912F731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B70E59-5831-45CD-B289-BED0E912F731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B70E59-5831-45CD-B289-BED0E912F731}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
