@@ -11,4 +11,11 @@ public class TvShowManagerController(IManageTvShowsService service) : BaseContro
         var shows = await service.GetTvShowsAsync();
         return Ok(shows);
     }
+
+    [HttpPost]
+    public async Task<ActionResult> Post(TvShow tvShow)
+    {
+        var result = await service.AddTvShowAsync(tvShow);
+        return Ok(result);
+    }
 }

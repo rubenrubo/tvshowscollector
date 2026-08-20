@@ -1,7 +1,8 @@
 namespace TvShowsHub.Domain.TvShows;
 
-public interface IManageTvShowsService
+public interface ITvShowRepository
 {
     Task<TvShow[]> GetTvShowsAsync();
     Task<TvShow> AddTvShowAsync(TvShow tvShow);
+    Task DeleteTvShowAsync(int id);
 }
