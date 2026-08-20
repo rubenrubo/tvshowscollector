@@ -22,6 +22,7 @@ public class TvShow
         Summary = spec.Summary;
     }
     public int? Id { get; init; }
+    public int? TvMazeId { get; set; }
     public string? Name { get; set; }
     public string? Language { get; set; }
     public DateOnly? Premiered { get; set; }

@@ -2,7 +2,8 @@ namespace TvShowsHub.Domain.TvShows;
 
 public interface IManageTvShowsService
 {
-    Task<TvShow[]> GetTvShowsAsync();
+    Task SyncTvMazeShowsAsync();
+    Task SyncTvMazeShowsAsync(int startPage);
     Task<TvShow> AddTvShowAsync(AddTvShowSpec spec);
     Task UpdateTvShowAsync(UpdateTvShowSpec spec);
     Task RemoveTvShowAsync(int id);

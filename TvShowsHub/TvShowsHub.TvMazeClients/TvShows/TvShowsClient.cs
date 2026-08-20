@@ -11,13 +11,13 @@ public class TvShowsClient : BaseClient, ITvShowClient
         _client = factory.CreateClient("TvMaze");
     }
     
-    public async Task<TvShow[]> GetTvShows()
+    public async Task<TvShow[]> GetTvShowsAsync(int page)
     {
-        var apiResults = await GetAsync<TvShowsDto[]>(_client, "/shows?page=1");
+        var apiResults = await GetAsync<TvShowsDto[]>(_client, $"/shows?page={page}");
 
         return apiResults.Select(apiResult => new TvShow
         {
-            Id = apiResult.Id ?? 0,
+            TvMazeId = apiResult.Id,
             Name = apiResult.Name,
             Language = apiResult.Language,
             Premiered = apiResult.Premiered,

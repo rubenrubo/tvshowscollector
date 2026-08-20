@@ -10,6 +10,12 @@ public class TvShowRepository(TvShowsHubDbContext dbContext) : ITvShowRepository
         return await dbContext.TvShows.FirstOrDefaultAsync(x => x.Id == id);
     }
 
+    public async Task AddTvShowsAsync(IEnumerable<TvShow> tvShows)
+    {
+        await dbContext.AddRangeAsync(tvShows);
+        await dbContext.SaveChangesAsync();
+    }
+
     public async Task<TvShow> AddTvShowAsync(TvShow tvShow)
     {
         await dbContext.AddAsync(tvShow);

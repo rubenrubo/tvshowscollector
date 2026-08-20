@@ -5,11 +5,11 @@ namespace TvShowsHub.API.Controllers;
 
 public class TvShowManagerController(IManageTvShowsService service) : BaseController
 {
-    [HttpGet]
-    public async Task<ActionResult> Get()
+    [HttpGet("sync")]
+    public async Task<ActionResult> Sync()
     {
-        var shows = await service.GetTvShowsAsync();
-        return Ok(shows);
+        await service.SyncTvMazeShowsAsync();
+        return Ok();
     }
 
     [HttpPost]
